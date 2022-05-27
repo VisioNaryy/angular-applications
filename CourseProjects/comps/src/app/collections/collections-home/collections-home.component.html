@@ -1,0 +1,25 @@
+<!--app-divider is from shared component, that we imported to collections.module-->
+<app-divider>Table component</app-divider>
+<app-table
+  [data]="data"
+  [headers]="headers"
+  classNames="striped celled"
+></app-table>
+
+<app-divider>Tab Menu</app-divider>
+<app-tabs>
+  <!-- alternative routing syntax: -->
+  <!-- <a [routerLink]="[./]" routerLinkActive="active" class="item">Biography</a> -->
+  <!-- <a [routerLink]="['./', 'companies']" routerLinkActive="active" class="item">Companies</a> -->
+  <a
+    routerLink="./"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="item"
+    >Biography</a
+  >
+  <a routerLink="./companies" routerLinkActive="active" class="item"
+    >Companies</a
+  >
+  <a routerLink="./partners" routerLinkActive="active" class="item">Partners</a>
+</app-tabs>
